@@ -1,5 +1,5 @@
 <index: element="datepicker">
-  <div class="datepicker {{if inline}}datepicker-inline{{/}}" as="parent">
+  <div class="{{if inline}}datepicker datepicker-inline{{/}}" as="parent">
     {{if inline}}
       {{if view === 'month'}}
         <view name="month"></view>
@@ -11,7 +11,7 @@
         <view name="decade"></view>
       {{/if}}
     {{else}}
-      <input type="text" value="{{active}}" class="form-control" on-focus="model.set('show', true)">
+      <input type="text" value="{{active}}" class="form-control" on-focus="model.set('show', true)" id="{{id}}" name="{{name}}" required="{{required}}">
 
       <div style="position: relative">
         <div class="datepicker datepicker-dropdown dropdown-menu datepicker-orient-left datepicker-orient-top" style="display: {{if show}}block{{/}};">
